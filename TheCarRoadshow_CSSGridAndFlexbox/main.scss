@@ -1,0 +1,423 @@
+/////////////
+//Variables//
+/////////////
+$text: #333;
+$background: #eee;
+$border: #ccc;
+$red: #d82201;
+$green: rgb(77, 190, 83);
+$footer: #222;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $text;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.black {
+    color: $text !important;
+}
+
+header {
+    display: grid;
+    height: 60vh;
+    background-image: url(images/jaguar-etype.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+
+    .navbar {
+        display: grid;
+        grid-column: 1/-1;
+        margin: 15px;
+
+        .navbar-brand {
+            grid-column: 1/4;
+            grid-row: 4;
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Roboto Slab',
+            sans-serif;
+            font-size: 4em;
+            font-weight: 200;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .navbar-container {
+            grid-column: 4;
+            grid-row: 4;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 8px;
+
+            .navbar-nav {                
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .nav-item {
+                    list-style-type: none;
+                    margin-right: 4%;
+
+                    .nav-link {
+                        color: #fff;
+                        text-decoration: none;
+                        font-family: 'Roboto Slab',
+                        sans-serif;
+                        font-size: 1.2rem;
+                    }
+                }
+                .nav-item:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .navbar-container-mobile {
+            display: none;
+            color: $text;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40vh;
+            background-color: #fff;
+
+            .navbar-nav {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: space-around;
+                flex-direction: column;
+
+                .nav-item {
+                    list-style-type: none;
+                    text-align: center;
+                    border-bottom: 1px solid $border;
+                    padding: 10px;
+
+                    .nav-link {
+                        color: $text;
+                        text-decoration: none;
+                        font-family: 'Roboto Slab',
+                            sans-serif;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .nav-item:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            
+        }
+
+        .burger-menu {
+            color: white;
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+    }
+    
+}
+
+article {
+    margin: 15px;
+
+    h2 {
+        font-family: 'Roboto Slab',
+        sans-serif;
+        text-align: center;
+        letter-spacing: 1px;
+        color: $text;
+        position: relative;
+    }
+
+    h2:before,
+    h2:after {
+        content: "";
+        margin: 0 5px;
+        font-size: 2em;
+        width: 18px;
+        border-bottom: 3px solid $text;
+        position: absolute;
+        margin-top: 14px;
+    }
+
+    h2:before {
+        margin-left: -35px;
+    }
+
+    h2:after {
+        margin-left: 15px;
+    }
+
+    .car-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1/-1;
+        grid-gap: 15px;
+        margin: 15px 0;
+        
+        .cars {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            p {
+                background-color: $background;
+                padding: 3px;
+                font-size: 0.8em;
+                display: block;
+            }
+        }
+    }
+
+    .show-info {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column: 1/-1;
+        grid-gap: 15px;
+        margin: 40px 0 15px 0;
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h2:first-of-type {
+            grid-row: 1;
+            grid-column: 2/5;
+        }
+
+        h2:last-of-type {
+            grid-row: 1;
+            grid-column: 5/8;
+        }
+
+        .upcomming {
+            display: grid;
+            grid-column: 2/5;
+            grid-row: 1/5;
+            margin-top: 40px;
+
+            .show {
+                .shows {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    background-color: $background;
+                    border-top: 1px solid $border;
+                    border-left: 1px solid $border;
+                    border-right: 1px solid $border;
+
+                    .date,
+                    .place {
+                        margin: 5px;
+                        padding: 5px 10px;
+                    }
+
+                    .date {
+                        grid-column: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        h4 {
+                            color: $red;
+                            font-size: 0.8rem;
+                        }
+
+                        h3 {
+                            font-family: 'Roboto Slab',
+                                sans-serif;
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    .place {
+                        grid-column: span 7;
+                        border-left: 1px solid $border;
+                    }
+                }
+
+                .shows:last-of-type {
+                    border-bottom: 1px solid $border;
+                }
+            }
+        }
+        .ticket {
+            grid-column: 5/8;
+            grid-row: 1/5;
+            margin-top: 40px;
+
+            .discounts {
+                display: grid;
+                grid-gap: 15px;
+                height: 100%;
+
+                .discount {   
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $background;
+                    border: 1px solid $border;
+                    padding: 20px;
+
+                    h3 {
+                        font-size: 1.7rem;
+                        margin-bottom: 5px;
+                    }
+
+                    button {
+                        padding: 12px 52px 10px 52px;
+                        border-radius: 2px;
+                        border-bottom: 5px solid #008000;
+                        background-image: linear-gradient(#50bc50, #419441);
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                        letter-spacing: 1px;
+                        margin-top: 21px;
+                    }
+                }
+
+                .disabled {
+                    opacity: 0.5;
+
+                    button {
+                        background-image: linear-gradient(#bbb, #999);
+                        border-bottom: 5px solid #777;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 25px 15px;
+    background-color: $footer;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-top: 25px;
+
+    p {
+        color: #fff;
+        grid-column: 1/3;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .some {
+        grid-column: 8;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        i {
+            color: #fff;
+        }
+    }  
+}
+
+/////////////////
+//Media queries//
+/////////////////
+@media only screen and (max-width: 1000px) {
+    header {
+        background-position: left;
+
+        .navbar {
+
+            .navbar-brand {
+                grid-column: 1/-1;
+            }
+
+            .burger-menu {
+                display: block;
+            }
+
+            .navbar-container {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        height: 40vh;
+        .navbar {
+            .navbar-brand {
+                font-size: 3em;
+            }
+        }
+    }
+
+    article {
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        .car-display {
+            grid-template-columns: 1fr;
+        }
+
+        .show-info {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+
+            h2:first-of-type {
+                grid-column: 1/4;
+                grid-row: 1;
+            }
+
+            h2:last-of-type {
+                grid-column: 1/4;
+                grid-row: 3;
+                margin-top: 30px;
+            }
+
+            .upcomming {
+                grid-column: 1/4;
+                grid-row: 2;
+                margin-top: 0;
+            }
+            .ticket {
+                grid-column: 1/4;
+                grid-row: 4;
+                margin-top: 0;
+            }
+        }
+    }
+
+        footer {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            .some {
+                i {
+                    margin: 20px;
+                }
+            }
+        }
+}
