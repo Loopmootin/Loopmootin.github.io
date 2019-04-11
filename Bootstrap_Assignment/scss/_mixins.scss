@@ -1,0 +1,33 @@
+@mixin my-gradient {
+    background: linear-gradient($my-gray-opas, $my-blue-opas);
+}
+
+@mixin stylish-button {
+    background-color: $my-brand;
+    border: none;
+    padding: $button-padding;
+    border-radius: 400px;
+
+    &:hover {
+        background-color: lighten($my-brand, 20%);
+    }
+}
+
+@mixin mail-input {
+    width: $half-width !important;
+    min-width: $min-width;
+    margin: $margin-auto;
+}
+
+@mixin backgrounds {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: $full-height;
+    width: $full-width;
+}
+
+@mixin my-modal {
+    background: linear-gradient($my-gray, $my-blue);
+    color: $my-font-color;
+}

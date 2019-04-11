@@ -1,0 +1,17 @@
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+
+// My styles
+@import "variables";
+@import "mixins";
+@import "type";
+
+// My styles on Bootstrap
+@import "modal";
+@import "jumbotron";
+@import "nav";
+@import "container";
+@import "carousel";
+@import "forms";
+@import "buttons";

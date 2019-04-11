@@ -1,0 +1,9 @@
+.modal-content {
+    @include my-modal;
+    border: none;
+    .modal-footer {
+        .btn-secondary {
+            @include stylish-button;
+        }
+    }
+}

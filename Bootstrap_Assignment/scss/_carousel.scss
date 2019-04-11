@@ -1,0 +1,23 @@
+.carousel {
+    height: $full-height;
+    width: $full-width;
+
+    .carousel-inner {
+        #slide-1 {
+            background-image: url("../images/car-1.jpg");
+        }
+        #slide-2 {
+            background-image: url("../images/car-2.jpg");
+        }
+        #slide-3 {
+            background-image: url("../images/car-3.jpg");
+        }
+        .carousel-item {
+            @include backgrounds;
+            label {
+                display: $block;
+                text-align: $align-center;
+            }
+        }
+    }
+}

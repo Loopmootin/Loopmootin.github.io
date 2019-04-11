@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Bootstrap - SASS</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="scss/main.css">
+    
+</head>
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Disclaimer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This is a school project and is for educational purposes only! 
+                    <br>
+                    There is no prize and I do not own any of the photos on this site.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+
+                    <!-- Carousel slide 1 -->
+                    <div id="slide-1" class="carousel-item active" data-interval="false">
+
+                        <!-- Jumbotron -->
+                        <div class="jumbotron">
+                            <h1 class="display-4">Check out this car!</h1>
+                            <p class="lead">It can drive very fast</p>
+                            <hr class="my-4">
+                            <p>And it says WROOOOM</p>
+                            <hr class="my-4">
+
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-xs">
+                                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span>GET A FREE CAR!</span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                    <!-- Form -->
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Enter Email">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Carousel slide 2 -->
+                    <div id="slide-2" class="carousel-item" data-interval="false">
+
+                        <!-- Jumbotron -->
+                        <div class="jumbotron">
+                            <h1 class="display-4">Check out this car!</h1>
+                            <p class="lead">It can drive very fast</p>
+                            <hr class="my-4">
+                            <p>And it says WROOOOM</p>
+                            <hr class="my-4">
+
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-xs">
+                                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span>GET A FREE CAR!</span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+
+                                    <!-- Form -->
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2"
+                                                aria-describedby="emailHelp" placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                                placeholder="Enter Email">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Carousel slide 3 -->
+                    <div id="slide-3" class="carousel-item" data-interval="false">
+
+                        <!-- Jumbotron -->
+                        <div class="jumbotron">
+                            <h1 class="display-4">Check out this car!</h1>
+                            <p class="lead">It can drive very fast</p>
+                            <hr class="my-4">
+                            <p>And it says WROOOOM</p>
+
+                            <hr class="my-4">
+
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-xs">
+                                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span>GET A FREE CAR!</span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent3">
+
+                                    <!-- Form -->
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail3"
+                                                aria-describedby="emailHelp" placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword3"
+                                                placeholder="Enter Email">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controllers -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script src="main.js"></script>
+</body>
+</html>
