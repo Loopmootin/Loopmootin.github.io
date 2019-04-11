@@ -4,13 +4,13 @@
 
     .carousel-inner {
         #slide-1 {
-            background-image: url("../images/car-1.jpg");
+            background-image: url("../images/car-3.jpg");
         }
         #slide-2 {
             background-image: url("../images/car-2.jpg");
         }
         #slide-3 {
-            background-image: url("../images/car-3.jpg");
+            background-image: url("../images/car-1.jpg");
         }
         .carousel-item {
             @include backgrounds;
