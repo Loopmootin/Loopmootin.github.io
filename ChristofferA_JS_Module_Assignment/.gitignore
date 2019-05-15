@@ -1,0 +1,6 @@
+# Ignore folders with /
+node_modules/
+
+# Ignore all files of type with *.js
+
+# Ignore signle file with readme.txt

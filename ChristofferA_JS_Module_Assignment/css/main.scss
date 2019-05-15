@@ -1,0 +1,173 @@
+// Fonts
+$sans-serif: 'Roboto', sans-serif;
+$font-light: 300;
+$font-bold: 700;
+
+// Colors
+// Colors
+$black: #353535;
+$gray: #969696;
+$medium-gray: #cacaca;
+$light-gray: #f5f5f5;
+$orange: #f17464;
+$blue: #6f81ce;
+
+
+// General Styles
+*, *::before, *::after {  
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+// Semantic color names
+$body-background: $light-gray;
+$menu-background: $gray;
+
+$main-font-color: $black;
+$menu-active-color: $main-font-color;
+$menu-font-color: $medium-gray;
+
+body {
+    font-family: $sans-serif;
+    background: $body-background;
+    color: $main-font-color;
+    font-size: 1.2rem;
+    line-height: 1.45;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+// Navigation
+.sidebar {
+    background: $menu-background;
+    flex: 1 1 20%;
+    min-width: 300px;
+    padding: 3em;
+
+    .logo {
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+        font-size: 1.5em;
+
+        @media (min-width: 1500px) {
+            margin-bottom: 3em;
+        }
+
+        span {
+            font-weight: $font-bold;
+        }
+    }
+
+    .nav-item {
+        color: $menu-font-color;
+        text-decoration: none;
+        font-size: 1.7rem;
+        display: inline-block;
+        margin-right: 2em;
+
+        @media (min-width: 1500px) {
+            display: block;
+            margin: 7vh 0;
+        }
+
+        &.active {
+            color: $menu-active-color;
+        }
+    }
+}
+
+
+// Main content area
+.main-content {
+    padding: 10%;
+    flex: 1 1 80%;
+    min-height: 100vh;
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+        h2 {
+            font-weight: $font-bold;
+        }
+        .btn-container {
+            button {
+                padding: 1em 2em;
+                background-color: $medium-gray;
+                color: $light-gray;
+                margin: 0 .5em;
+                font-size: 1rem;
+                font-weight: $font-bold;
+            }
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    // Portfolio
+    .prices,
+    .changes {
+        display: grid;
+        height: 100%;
+        grid-template-rows: repeat(auto, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1em;
+
+        
+        //animation: pulse 24s infinite ease-in-out;
+
+        .price-item,
+        .changes-item {
+            background: $blue;
+            color: $light-gray;
+            font-weight: $font-bold;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            background-size: cover;
+            background-position: top left;
+            transition: all ease-in-out 300ms;
+            position: relative;
+            z-index: 10;
+            opacity: 1;
+
+            h4 {
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: $font-light;
+
+                span {
+                    font-weight: $font-bold;
+                }
+            }
+
+            &.square {
+                grid-row: span auto;
+                grid-column: span 3;
+            }
+
+            &:hover {
+                color: white;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+            }
+        }
+    }
+}
+
+
+
